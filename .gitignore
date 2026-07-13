@@ -1,0 +1,35 @@
+# Secrets — never commit these
+Templates/.asc.env
+Scripts/.asc.env
+*.p8
+AuthKey_*.p8
+
+# Fastlane runtime output
+fastlane/report.xml
+fastlane/README.md
+fastlane/test_output/
+fastlane/screenshots/*/
+!fastlane/screenshots/README.md
+fastlane/metadata/review_information/
+deliver.log
+
+# Xcode / build artifacts
+build/
+DerivedData/
+*.xcarchive
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Bundler / rbenv
+.bundle/
+vendor/bundle/
+
+# macOS
+.DS_Store
+
+# Personal / local-only — keep off the public repo
+/Learnings/
+/asckit_*.plan.md
+/docs/
+/examples/

@@ -1,0 +1,16 @@
+# frozen_string_literal: true
+#
+# Copy this file to fastlane/Appfile in your app repo. The Fastfile template
+# reads the identifier and team from ENV, but a couple of fastlane actions
+# (e.g. `produce`, older `deliver` flows) look here first.
+
+app_identifier(ENV.fetch("ASC_BUNDLE_ID", "com.example.MyApp"))
+team_id(ENV.fetch("ASC_TEAM_ID", "TEAMID1234"))
+
+# Apple ID login is only needed for the legacy fastlane_session auth flow.
+# API-key auth (recommended) does not need this line.
+apple_id(ENV["APPLE_ID"]) if ENV["APPLE_ID"]
+
+for_platform :ios do
+  app_identifier(ENV.fetch("ASC_BUNDLE_ID", "com.example.MyApp"))
+end
